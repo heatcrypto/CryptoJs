@@ -11,7 +11,8 @@ var MathReplaceMent = {
   abs: Math.abs,
   sin: Math.sin,
   sqrt: Math.sqrt,
-  pow: Math.pow
+  pow: Math.pow,
+  ceil: Math.ceil
 }
 
 // ==================================================================================================
