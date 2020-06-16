@@ -2,7 +2,7 @@
   "name": "cryptojs",
   "version": "1.0.0",
   "description": "Partial CryptoJS v3.1.2 with entropy patch for nodejs",
-  "main": "index.js",
+  "main": "dist/CryptoJs.js",
   "scripts": {
     "build": "tsc --project tsconfig.json"
   },
