@@ -1,0 +1,24 @@
+{
+  "name": "cryptojs",
+  "version": "1.0.0",
+  "description": "Partial CryptoJS v3.1.2 with entropy patch for nodejs",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc --project tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heatcrypto/CryptoJs.git"
+  },
+  "author": "dennis@heatledger.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/heatcrypto/CryptoJs/issues"
+  },
+  "homepage": "https://github.com/heatcrypto/CryptoJs#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^14.0.13",
+    "typescript": "^3.9.5"
+  }
+}

@@ -11,3 +11,10 @@ code.google.com/p/crypto-js/wiki/License
 ---
 
 With added TypeScript bindings and patched random source
+
+Consists of: 
+
+  - sha256.js
+  - pbkdf2.js
+  - hmac.js
+  - aes.js
