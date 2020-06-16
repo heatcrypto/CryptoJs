@@ -5,7 +5,7 @@ var crypto_1 = require("crypto");
 /**
  * We replace Math.random here to use crypto randomBytes
  */
-var MathReplaceMent = {
+var MathReplacement = {
     random: function () {
         return crypto_1.randomBytes(8).readUInt32LE() / 0xffffffff;
     },
@@ -14,7 +14,9 @@ var MathReplaceMent = {
     sin: Math.sin,
     sqrt: Math.sqrt,
     pow: Math.pow,
-    ceil: Math.ceil
+    ceil: Math.ceil,
+    min: Math.min,
+    max: Math.max
 };
 // ==================================================================================================
 // START INCLUDE FILE cryptojs/aes.js
@@ -200,7 +202,7 @@ exports.CryptoJS = (function (u, p) {
     });
     var n = (d.algo = {});
     return d;
-})(MathReplaceMent);
+})(MathReplacement);
 (function () {
     var u = exports.CryptoJS, p = u.lib.WordArray;
     u.enc.Base64 = {
@@ -293,7 +295,7 @@ exports.CryptoJS = (function (u, p) {
     });
     t.MD5 = v._createHelper(r);
     t.HmacMD5 = v._createHmacHelper(r);
-})(MathReplaceMent);
+})(MathReplacement);
 (function () {
     var u = exports.CryptoJS, p = u.lib, d = p.Base, l = p.WordArray, p = u.algo, s = (p.EvpKDF = d.extend({
         cfg: d.extend({
@@ -939,7 +941,7 @@ exports.CryptoJS.lib.Cipher ||
     }));
     s.SHA256 = g._createHelper(f);
     s.HmacSHA256 = g._createHmacHelper(f);
-})(MathReplaceMent);
+})(MathReplacement);
 // ==================================================================================================
 // END INCLUDE FILE cryptojs/sha256.js
 // ==================================================================================================

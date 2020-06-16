@@ -3,7 +3,7 @@ import { randomBytes } from "crypto"
 /**
  * We replace Math.random here to use crypto randomBytes
  */
-var MathReplaceMent = {
+var MathReplacement = {
   random: function () {
     return randomBytes(8).readUInt32LE() / 0xffffffff;
   },
@@ -12,7 +12,9 @@ var MathReplaceMent = {
   sin: Math.sin,
   sqrt: Math.sqrt,
   pow: Math.pow,
-  ceil: Math.ceil
+  ceil: Math.ceil,
+  min: Math.min,
+  max: Math.max
 }
 
 // ==================================================================================================
@@ -206,7 +208,7 @@ export var CryptoJS = (function(u?: any, p?: any) {
   })
   var n: any = (d.algo = {})
   return d
-})(MathReplaceMent)
+})(MathReplacement)
 ;(function() {
   var u = CryptoJS,
     p = u.lib.WordArray
@@ -405,7 +407,7 @@ export var CryptoJS = (function(u?: any, p?: any) {
   })
   t.MD5 = v._createHelper(r)
   t.HmacMD5 = v._createHmacHelper(r)
-})(MathReplaceMent)
+})(MathReplacement)
 ;(function() {
   var u = CryptoJS,
     p = u.lib,
@@ -1224,7 +1226,7 @@ code.google.com/p/crypto-js/wiki/License
     }))
   s.SHA256 = g._createHelper(f)
   s.HmacSHA256 = g._createHmacHelper(f)
-})(MathReplaceMent)
+})(MathReplacement)
 
 // ==================================================================================================
 // END INCLUDE FILE cryptojs/sha256.js
